@@ -64,6 +64,10 @@ public class Deck {
         return new ArrayList<>(deck);
     }
 
+    public int getSum() {
+        return deck.stream().mapToInt(x -> x.getType().getVal()).sum();
+    }
+
     @Override
     public String toString() {
         return deck.toString();
